@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Javascript Drum Kit</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Sound Library &amp; Controller</h1>
+        <div class="keys">
+            <div data-key="65" class="key">
+                <kbd>A</kbd>
+                <br>
+                <span class="sound">Ah!</span>
+            </div>
+            <div data-key="66" class="key">
+                    <kbd>B</kbd>
+                    <br>
+                    <span class="sound">Clap</span>
+            </div>
+            <div data-key="83" class="key">
+                    <kbd>S</kbd>
+                    <br>
+                    <span class="sound">Souffle</span>
+            </div>
+            <div data-key="79" class="key">
+                    <kbd>O</kbd>
+                    <br>
+                    <span class="sound">Oh!</span>
+            </div>
+        </div>
+        <!-- For the number of the data-key : http://keycode.info/ -->
+
+        <audio data-key="65" src="sounds/a.mp3"></audio>
+        <audio data-key="66" src="sounds/clap.mp3"></audio>
+        <audio data-key="83" src="sounds/souffle.mp3"></audio>
+        <audio data-key="79" src="sounds/o.mp3"></audio>
+    </div>
+
+    <script>
+        window.addEventListener("keydown", function(e){
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+            console.log(audio);
+            if(!audio) return; // stop the function from running all 
+            audio.currentTime = 0; // rewind to the start
+            audio.play();
+            // console.log(key);
+        });
+    </script>
+
+</body>
+</html>
