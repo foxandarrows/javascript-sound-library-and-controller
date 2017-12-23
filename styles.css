@@ -25,6 +25,11 @@ h1{
     border-bottom-color: yellow;
 }
 
+h6{
+    position: absolute;
+    bottom: 15%;
+}
+
 .keys{
     position: absolute;
     top: 45%;
@@ -57,5 +62,6 @@ kbd{
 
 .playing{
     border-color : yellow;
+    box-shadow: 1px 1px lightyellow;
     transform : scale(1.1);
 }
