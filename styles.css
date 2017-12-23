@@ -1,5 +1,4 @@
 body{
-
     background-color: black;
     color : yellow;
     font-family: "Helvetica", Helvetica, sans-serif;
@@ -41,14 +40,22 @@ h1{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    border : 0.2em solid yellow;
+    border : 0.2em solid white;
     transition : all 0.1s;
     width: 5em;
     height: 5em; 
-    margin-right : 0.5em;
+    margin-right : 1em;
+}
+
+kbd{
+    color: white;
+}
+
+.sound{
+    color: yellow;
 }
 
 .playing{
     border-color : yellow;
-    transform : scale(1.5);
+    transform : scale(1.1);
 }

@@ -31,6 +31,11 @@
                     <br>
                     <span class="sound">Oh!</span>
             </div>
+            <div data-key="73" class="key">
+                    <kbd>I</kbd>
+                    <br>
+                    <span class="sound">I</span>
+            </div>
         </div>
         <!-- For the number of the data-key : http://keycode.info/ -->
 
@@ -38,6 +43,7 @@
         <audio data-key="66" src="sounds/clap.mp3"></audio>
         <audio data-key="83" src="sounds/souffle.mp3"></audio>
         <audio data-key="79" src="sounds/o.mp3"></audio>
+        <audio data-key="73" src="sounds/i.mp3"></audio>
     </div>
 
     <script>
@@ -49,7 +55,10 @@
             audio.currentTime = 0; // rewind to the start
             audio.play();
             // console.log(key);
+            key.classList.add("playing");
         });
+
+
     </script>
 
 </body>
